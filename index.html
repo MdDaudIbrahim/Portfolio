@@ -1,29 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Md.Daud Ibrahim - Portfolio</title>
+    <title>Md. Daud Ibrahim - Software Developer & Programmer | Portfolio</title>
+    <meta name="description" content="Official portfolio of Md. Daud Ibrahim - A passionate web developer and Computer Science student at AIUB. Specializing in full-stack development, AI, and modern web technologies.">
+    <meta name="keywords" content="Md. Daud Ibrahim, Daud Ibrahim, md daud ibrahim, Software Developer Bangladesh, AIUB Computer Science, Web Developer Dhaka">
+    <meta name="author" content="Md. Daud Ibrahim">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Md. Daud Ibrahim - Software Developer & Programmer">
+    <meta property="og:description" content="Official portfolio of Md. Daud Ibrahim - A passionate web developer and Computer Science student at AIUB.">
+    <meta property="og:image" content="img/md-daud-ibrahim-profile.jpg">
+    <meta property="og:url" content="https://daudibrahim.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Md. Daud Ibrahim - Software Developer & Programmer">
+    <meta name="twitter:description" content="Official portfolio of Md. Daud Ibrahim - A passionate web developer and Computer Science student at AIUB.">
+    <meta name="twitter:image" content="img/md-daud-ibrahim-profile.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://daudibrahim.com">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Md. Daud Ibrahim",
+      "url": "https://daudibrahim.com",
+      "image": "img/md-daud-ibrahim-profile.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/md-daud-ibrahim-98176524b/",
+        "https://github.com/MdDaudIbrahim",
+        "https://www.facebook.com/md.daud05"
+      ],
+      "jobTitle": "Student",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "American International University-Bangladesh (AIUB)"
+      },
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "American International University-Bangladesh"
+      }
+    }
+    </script>
+
+    <!-- Existing CSS and JS imports -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/styles.css">
-
+    <script src="script.js" defer></script>
 </head>
+
+
 <body>
 <!-- Header -->
 <header>
     <nav>
-        <div class="logo">DI</div>
+        <div class="logo" aria-label="Website Logo" onclick="location.reload()">DI</div>
+
         <button class="mobile-menu-toggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
-        <ul class="nav-links">
+        <ul class="nav-links" role="navigation" aria-label="Main navigation">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -45,7 +90,7 @@
         </div>
     </div>
     <div class="hero-image">
-        <img src="img/profile.jpg" alt="Md.Daud Ibrahim" class="profile-img">
+        <img src="img/md-daud-ibrahim-profile.jpg" alt="Profile picture of Md. Daud Ibrahim" class="profile-img">
     </div>
     <div class="shapes">
         <div class="shape shape1"></div>
@@ -54,90 +99,90 @@
     </div>
 </section>
 
-
-<!-- ==============================================     -->
+<!-- About Section -->
 <section id="about">
     <h2>About Me</h2>
     <div class="about-content">
         <div class="about-text">
-            <p>Hello! I'm Md.Daud Ibrahim, a Computer Science and Engineering student at AIUB, passionate about Programming. I've honed my skills in HTML, CSS, JavaScript, C++, Java, and Python. I enjoy creating functional and visually appealing web experiences, tackling challenging projects, and exploring AI and machine learning.</p>
-            <p>Beyond coding, I keep up with tech trends, contribute to open-source projects, and share knowledge on my tech blog..</p>
+            <p>Hello! I'm Md. Daud Ibrahim, a Computer Science and Engineering student at AIUB, passionate about Programming. I've honed my skills in HTML, CSS, JavaScript, C++, Java, and Python. I enjoy creating functional and visually appealing web experiences, tackling challenging projects, and exploring AI and machine learning.</p>
+            <p>Beyond coding, I keep up with tech trends, contribute to open-source projects, and share knowledge on my tech blog.</p>
         </div>
         <div class="skills">
             <h3>Technical Skills</h3>
             <ul>
-                <li><span class="skill-name">HTML5 & CSS3  </span><span class="skill-level advanced">Advanced</span></li>
-                <li><span class="skill-name">JavaScript  </span><span class="skill-level intermediate">Intermediate</span></li>
-                <li><span class="skill-name">C++  </span><span class="skill-level intermediate">Intermediate</span></li>
-                <li><span class="skill-name">Python  </span><span class="skill-level intermediate">Intermediate</span></li>
-                <li><span class="skill-name">Java  </span><span class="skill-level beginner">Beginner</span></li>
-                <li><span class="skill-name">SQL & MongoDB  </span><span class="skill-level beginner">Beginner</span></li>
+                <li><span class="skill-name">HTML5 & CSS3</span><span class="skill-level advanced">Advanced</span></li>
+                <li><span class="skill-name">JavaScript</span><span class="skill-level intermediate">Intermediate</span></li>
+                <li><span class="skill-name">C++</span><span class="skill-level intermediate">Intermediate</span></li>
+                <li><span class="skill-name">Python</span><span class="skill-level intermediate">Intermediate</span></li>
+                <li><span class="skill-name">Java</span><span class="skill-level beginner">Beginner</span></li>
+                <li><span class="skill-name">SQL & MongoDB</span><span class="skill-level beginner">Beginner</span></li>
             </ul>
         </div>
     </div>
-    <!-- Download CV Button -->
     <div class="download-cv">
         <a href="img/myCV.pdf" download="Md.Daud_Ibrahim_CV" class="btn">Download CV</a>
     </div>
 </section>
 
-
-<!-- ================================================================ -->
+<!-- Projects Section -->
 <section id="projects">
     <h2>Projects</h2>
     <div class="project-grid">
         <div class="project">
-            <img src="img/ecommerce.jpg" alt="Business Website">
+            <img src="img/ecommerce.jpg" alt="E-commerce business website created by Md. Daud Ibrahim featuring product listings and checkout functionality">
             <h3>Business Website</h3>
             <p>A fully functional online store built with React.js and Node.js. Features include product listing, cart functionality, and secure checkout.</p>
-            <a href="projects/ecommerce.html" target="_blank" class="project-link">View Project</a>
+            <a href="projects/ecommerce.html" target="_blank" class="project-link" rel="noopener noreferrer">Explore Business Website</a>
         </div>
         <div class="project">
-            <img src="img/weather-app.png" alt="Weather App">
+            <img src="img/weather-app.png" alt="Weather App built by Md. Daud Ibrahim showing real-time weather information with vanilla JavaScript">
             <h3>Weather App</h3>
             <p>A responsive web app that provides real-time weather information using a third-party API. Built with vanilla JavaScript.</p>
-            <a href="projects/weather-app.html" target="_blank" class="project-link">View Project</a>
+            <a href="projects/weather-app.html" target="_blank" class="project-link" rel="noopener noreferrer">Check Out Weather App</a>
         </div>
         <div class="project">
-            <img src="img/blog.jpg" alt="Personal Blog">
+            <img src="img/blog.jpg" alt="Personal tech blog by Md. Daud Ibrahim sharing programming and tech insights, created with Node.js, Express.js, and MongoDB">
             <h3>Personal Blog</h3>
             <p>A dynamic blog site where I share my tech journey. Created with Node.js, Express.js, and MongoDB.</p>
-            <a href="https://xdaudibrahim.wixsite.com/daudibrahim/post/virtual-reality-in-gaming-what-s-next" target="_blank" class="project-link">View Project</a>
+            <a href="projects/blogs.html" target="_blank" class="project-link" rel="noopener noreferrer">Visit My Blog</a>
         </div>
     </div>
 </section>
-<!-- ============================================================================== -->
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-container">
-        <form action="submit_form.php" method="post" class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <h3>Get in Touch</h3>
-            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-            <ul>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:info@example.com">ur.daudibrahim@gmail.com</a></p>
-                <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">01590-076520</a></p>
-                <li><strong>Location:</strong> Housing, Siddhirgonj, Narayangonj, Dhaka, Bangladesh</li>
-            </ul>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/md-daud-ibrahim-98176524b/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/MdDaudIbrahim" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.facebook.com/md.daud05" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <form action="submit_form.php" method="post" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <ul>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@example.com">ur.daudibrahim@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">01590-076520</a></p>
+                    <li><strong>Location:</strong> Housing, Siddhirgonj, Narayangonj, Dhaka, Bangladesh</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/md-daud-ibrahim-98176524b/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/MdDaudIbrahim" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/md.daud05" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
 
 <footer>
     <div class="footer-waves">
