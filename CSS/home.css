@@ -1,0 +1,453 @@
+/* Enhanced Home Section with Better Mobile Support */
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 5% 40px;
+    position: relative;
+    overflow: hidden;
+    gap: 2rem;
+    background: var(--bg-color);
+}
+
+.home-content {
+    flex: 1;
+    max-width: 600px;
+    z-index: 1;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.intro.highlight {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    margin-bottom: 1rem;
+    animation: shimmer 3s infinite;
+}
+
+.typing-effect {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    overflow: hidden;
+    border-right: 0.15em solid var(--primary-color); /* Cursor effect */
+    white-space: nowrap;
+    display: inline-block;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    50% { border-color: transparent; }
+  }
+
+.typing-effect::after {
+    content: '|';
+    position: absolute;
+    right: -8px;
+    animation: blink 0.8s infinite;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    animation: fadeInUp 1s ease-out 0.8s backwards;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--primary-color), #ff00ff);
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+}
+
+.cta-button.secondary {
+    background: linear-gradient(135deg, #ff00ff, var(--primary-color));
+}
+
+.hero-image {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    animation: fadeIn 1s ease-out 1s backwards;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover .profile-img {
+    transform: scale(1.05);
+}
+
+/* Background shapes with reduced opacity for better visibility */
+.shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    filter: blur(60px);
+    opacity: 0.3;
+    animation: pulse 6s infinite;
+}
+
+.shape1 { 
+    top: 20%; 
+    left: 10%; 
+    width: 300px; 
+    height: 300px; 
+    background: radial-gradient(var(--primary-color), transparent 70%); 
+}
+
+.shape2 { 
+    top: 60%; 
+    right: 10%; 
+    width: 250px; 
+    height: 250px; 
+    background: radial-gradient(var(--secondary-color), transparent 70%); 
+}
+
+.shape3 { 
+    top: 40%; 
+    left: 50%; 
+    width: 200px; 
+    height: 200px; 
+    background: radial-gradient(var(--tertiary-color), transparent 70%); 
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .typing-effect {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column-reverse; /* Changed to show image first on mobile */
+        justify-content: flex-start;
+        padding-top: 80px;
+        gap: 2rem;
+    }
+
+    .home-content {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+        flex-wrap: wrap; /* Allows buttons to wrap on very small screens */
+    }
+
+    .hero-image {
+        width: 280px;
+        height: 280px;
+        margin: 20px auto 0;
+        border-radius: 20px;
+    }
+
+    .shape {
+        opacity: 0.2; /* Reduced opacity for better text visibility on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #home {
+        padding-top: 60px;
+        gap: 1.5rem;
+    }
+
+    .typing-effect {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        width: 240px;
+        height: 240px;
+        border-radius: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0 20px;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from { 
+        opacity: 0; 
+        transform: translateX(-30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 0.3; 
+    }
+    50% { 
+        transform: scale(1.1); 
+        opacity: 0.4; 
+    }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes shimmer {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Add this for a typing effect on text */
+.typing-text {
+    overflow: hidden;
+    border-right: 0.15em solid var(--primary-color);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-color) }
+}
+
+/* Add this for a 3D transform effect on hover */
+.grid-item {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.grid-item:hover {
+    transform: rotateX(5deg) rotateY(5deg) scale(1.05);
+}
+/* -------- */
+
+#typingaffect{
+  text-align: center;
+}
+  
+/* Home Section Enhancements */
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 5%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .home-content {
+    max-width: 600px;
+    text-align: left;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+  }
+  /* ------------------------------------------------- */
+  .typing-effect {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    overflow: hidden;
+    border-right: 2px solid var(--primary-color); /* Cursor effect */
+    white-space: nowrap;
+    display: inline-block;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Typing and blink caret animation */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary-color); }
+  }
+  
+  .intro {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .cta-button {
+    background: linear-gradient(135deg, var(--primary-color), #ff00ff);
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.5);
+  }
+  
+  .cta-button.secondary {
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+  }
+  
+  .hero-image {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  
+  .shapes .shape1,
+  .shapes .shape2,
+  .shapes .shape3 {
+    position: absolute;
+    filter: blur(60px);
+    animation: pulse 6s infinite;
+  }
+  
+  .shape1 { top: 20%; left: 10%; width: 200px; height: 200px; background: radial-gradient(var(--primary-color), transparent 70%); }
+  .shape2 { top: 60%; right: 10%; width: 150px; height: 150px; background: radial-gradient(var(--secondary-color), transparent 70%); }
+  .shape3 { top: 40%; left: 50%; width: 180px; height: 180px; background: radial-gradient(var(--tertiary-color), transparent 70%); }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.2); opacity: 0.9; }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  
+  header {
+    transition: transform 0.3s ease;
+  }
+  
+  header.hidden {
+    transform: translateY(-100%);
+}
+
+

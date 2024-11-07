@@ -1,0 +1,166 @@
+/* Reset Grid Layout for Mobile */
+.grid-container {
+    display: block;
+    width: 100vw;
+    padding: 1rem;
+}
+
+/* Single column layout */
+.grid-item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    box-shadow: none;
+    border-radius: 5px;
+    transition: none; /* Remove complex animations */
+}
+
+/* Simplify Header for Mobile */
+header {
+    padding: 0.5rem;
+    background: rgba(10, 10, 31, 0.9);
+}
+
+.logo {
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+
+/* Adjust Typography */
+h1, h2, h3 {
+    font-size: 1.2rem;
+}
+
+p, a, nav ul li a {
+    font-size: 1rem;
+}
+
+/* Hide non-essential animations */
+@media (hover: none) {
+    .project:hover {
+        transform: none;
+    }
+    .project img {
+        transform: none;
+    }
+}
+
+/* Mobile-specific CSS */
+
+/* Optimize Header for Mobile */
+header {
+    padding: 0.8rem 1rem;
+    background: rgba(10, 10, 31, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    text-shadow: none;
+}
+
+/* Burger Menu Styles */
+.mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    transition: background 0.3s;
+}
+
+/* Mobile Navigation Menu */
+nav ul {
+    display: none; /* Hidden by default on mobile */
+}
+
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 31, 0.95);
+    padding: 1rem 0;
+    z-index: 999;
+}
+
+nav ul li {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Adjust Home Section for Mobile */
+#home {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 90vw;
+}
+
+.grid-item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+/* Single-column layout for text items */
+.grid-item.item1, .grid-item.item2, .grid-item.item3, .grid-item.item4, .grid-item.item5 {
+    width: 100%;
+    text-align: center;
+}
+
+/* Simplify text and button styles */
+h1, h2, h3 {
+    font-size: 1.2rem;
+}
+
+p, a, nav ul li a {
+    font-size: 1rem;
+}
+
+.cta-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+}
+
+/* Remove complex animations */
+.grid-item:hover,
+.project:hover {
+    transform: none;
+}
+
+/* Hide or simplify background animations */
+.shape {
+    display: none; /* Disable shapes for mobile */
+}
+
+/* Footer adjustments */
+footer {
+    padding: 2rem 1rem;
+    text-align: center;
+}

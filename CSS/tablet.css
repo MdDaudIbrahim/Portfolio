@@ -1,0 +1,32 @@
+/* Adjust header and logo for tablets */
+header {
+    padding: 0.8rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+}
+
+/* Grid Layout Adjustments */
+.grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    width: 90vw;
+    height: auto;
+    gap: 1.5rem;
+}
+
+.grid-item {
+    padding: 1rem;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+/* Reduce animations for better performance */
+.grid-item:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Adjust font sizes for better readability */
+h1, h2, h3 {
+    font-size: 1.5rem;
+}
